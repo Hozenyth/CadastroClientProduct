@@ -7,5 +7,8 @@ namespace Cadastro.Domain.Interfaces
     {
         Category Get(int id);
         IEnumerable<Category> GetAll();
+        void Insert(Category categoria);
+        void Update(Category categoria);
+        void Delete(int id);
     }
 }

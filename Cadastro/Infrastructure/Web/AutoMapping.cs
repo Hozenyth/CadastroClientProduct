@@ -18,6 +18,9 @@ namespace Cadastro.Infrastructure.Web
             CreateMap<Product, ProductViewModel>();
             CreateMap<ProductViewModel, Product>();
 
+            CreateMap<Category, CategoryViewModel>();
+            CreateMap<CategoryViewModel, Category>();
+
         }
     }
 }

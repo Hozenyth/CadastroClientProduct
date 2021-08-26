@@ -13,6 +13,7 @@ namespace Cadastro.Infrastructure.ExtensionMethods
 
             services.AddTransient<Interfaces.IClientViewModelService, Services.ClientViewModelService>();
             services.AddTransient<Interfaces.IProductViewModelService, Services.ProductViewModelService>();
+            services.AddTransient<Interfaces.ICategoryViewModelService, Services.CategoryViewModelService>();
 
 
             return services;

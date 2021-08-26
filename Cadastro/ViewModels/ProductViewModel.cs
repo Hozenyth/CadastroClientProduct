@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cadastro.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -21,10 +22,11 @@ namespace Cadastro.ViewModels
         [Required(ErrorMessage = "O valor do produto é requerido")]
         public decimal Value { get; set; }
 
-        [Required(ErrorMessage = "O email é requerido.")]
-        public string Email { get; set; }
-
+     
         [Display(Name = "Disponível")]
         public bool Ative { get; set; }
+
+        public int IdCategory { get; set; }
+        public Category Category { get; set; }
     }
 }

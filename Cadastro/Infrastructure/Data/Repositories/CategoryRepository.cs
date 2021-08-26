@@ -11,5 +11,7 @@ namespace Cadastro.Infrastructure.Data.Repositories
         {
 
         }
+
+        
     }
 }
