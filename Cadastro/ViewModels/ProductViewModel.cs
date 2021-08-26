@@ -13,18 +13,18 @@ namespace Cadastro.ViewModels
         [Required(ErrorMessage = "O código é requerido.")]
         public int Id { get; set; }
 
-        [Display(Name = "Nome")]
+        [Display(Name = "Nome do Poduto")]
         [Required(ErrorMessage = "O nome é requerido.")]
         public string Name { get; set; }
 
-        [Display(Name = "Value")]
+        [Display(Name = "Valor")]
         [Required(ErrorMessage = "O valor do produto é requerido")]
         public decimal Value { get; set; }
 
         [Required(ErrorMessage = "O email é requerido.")]
         public string Email { get; set; }
 
-        [Display(Name = "Ativo")]
+        [Display(Name = "Disponível")]
         public bool Ative { get; set; }
     }
 }

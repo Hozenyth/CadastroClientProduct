@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace Cadastro.Controllers
 {
-    public class ProductController : Controller
+    public class ProductsController : Controller
     {
         private readonly IProductViewModelService _productViewModelService;
-        public ProductController(IProductViewModelService productViewModelService)
+        public ProductsController(IProductViewModelService productViewModelService)
         {
             _productViewModelService = productViewModelService;
         }
@@ -119,3 +119,4 @@ namespace Cadastro.Controllers
         }
     }
 }
+
