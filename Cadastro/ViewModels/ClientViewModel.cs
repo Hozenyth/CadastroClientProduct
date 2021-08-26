@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -26,5 +27,7 @@ namespace Cadastro.ViewModels
 
         [Display(Name = "Ativo")]
         public bool Ative { get; set; }
+
+      
     }
 }

@@ -11,33 +11,33 @@ namespace Cadastro.Controllers
 {
     public class CategoriesController : Controller
     {
-        private readonly ICategoryViewModelService _clientViewModelService;
+        private readonly ICategoryViewModelService _categoryViewModelService;
         public CategoriesController(ICategoryViewModelService clientViewModelService)
         {
-            _clientViewModelService = clientViewModelService;
+            _categoryViewModelService = clientViewModelService;
         }
 
-        // GET: Clients
+        // GET: Categories
         public ActionResult Index()
         {
-            var list = _clientViewModelService.GetAll();
+            var list = _categoryViewModelService.GetAll();
             return View(list);
         }
 
-        // GET: Clients/Details/5
+        // GET: Categories/Details/5
         public ActionResult Details(int id)
         {
-            var viewModel = _clientViewModelService.Get(id);
+            var viewModel = _categoryViewModelService.Get(id);
             return View(viewModel);
         }
 
-        // GET: Clients/Create
+        // GET: Categories/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Clients/Create
+        // POST: Categories/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(CategoryViewModel viewModel)
@@ -47,7 +47,7 @@ namespace Cadastro.Controllers
 
                 if (ModelState.IsValid)
                 {
-                    _clientViewModelService.Insert(viewModel);
+                    _categoryViewModelService.Insert(viewModel);
 
                     return RedirectToAction(nameof(Index));
                 }
@@ -59,14 +59,14 @@ namespace Cadastro.Controllers
             }
         }
 
-        // GET: Clients/Edit/5
+        // GET: Categories/Edit/5
         public ActionResult Edit(int id)
         {
-            var viewModel = _clientViewModelService.Get(id);
+            var viewModel = _categoryViewModelService.Get(id);
             return View(viewModel);
         }
 
-        // POST: Clients/Edit/5
+        // POST: Categories/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, CategoryViewModel viewModel)
@@ -75,7 +75,7 @@ namespace Cadastro.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    _clientViewModelService.Update(viewModel);
+                    _categoryViewModelService.Update(viewModel);
 
                     return RedirectToAction(nameof(Index));
                 }
@@ -87,14 +87,14 @@ namespace Cadastro.Controllers
             }
         }
 
-        // GET: Clients/Delete/5
+        // GET: Categories/Delete/5
         public ActionResult Delete(int id)
         {
-            var viewModel = _clientViewModelService.Get(id);
+            var viewModel = _categoryViewModelService.Get(id);
             return View(viewModel);
         }
 
-        // POST: Clients/Delete/5
+        // POST: Categories/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)
@@ -103,17 +103,17 @@ namespace Cadastro.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    _clientViewModelService.Delete(id);
+                    _categoryViewModelService.Delete(id);
 
                     return RedirectToAction(nameof(Index));
                 }
 
-                var viewModel = _clientViewModelService.Get(id);
+                var viewModel = _categoryViewModelService.Get(id);
                 return View(viewModel);
             }
             catch
             {
-                var viewModel = _clientViewModelService.Get(id);
+                var viewModel = _categoryViewModelService.Get(id);
                 return View(viewModel);
             }
         }

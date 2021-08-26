@@ -10,6 +10,10 @@ namespace Cadastro.ViewModels
     public class CategoryViewModel
     {
         [Key]
+        [Display(Name = "Código")]
+        [Required(ErrorMessage = "O código é requerido.")]
+        public int Id { get; set; }
+        [Key]
         [Display(Name = "Name")]
         [Required(ErrorMessage = "O nome da categoria é requerido.")]
         public string Name { get; set; }
