@@ -14,7 +14,7 @@ namespace Cadastro.ViewModels
         [Required(ErrorMessage = "O código é requerido.")]
         public int Id { get; set; }
         [Key]
-        [Display(Name = "Name")]
+        [Display(Name = "Categoria")]
         [Required(ErrorMessage = "O nome da categoria é requerido.")]
         public string Name { get; set; }
 

@@ -27,6 +27,9 @@ namespace Cadastro.ViewModels
         public bool Ative { get; set; }
 
         public int IdCategory { get; set; }
+
+        [Display(Name = "Categoria")]
+        [Required(ErrorMessage = "A categoria do produto é requerida")]
         public Category Category { get; set; }
     }
 }
